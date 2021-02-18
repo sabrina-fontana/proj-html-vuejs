@@ -68,20 +68,20 @@ header {
 
 .jumbotron {
   overflow: hidden;
-  height: 800px;
+  background-color: $darker-bg;
+  height: 820px;
   position: relative;
 
   img {
-    width: 1050px;
-    z-index: -1;
+    width: 1060px;
     position: absolute;
     top: -40px;
-    right: -180px;
+    right: -220px;
   }
 
   &-content {
-    width: 700px;
-    margin-left: 130px;
+    width: 650px;
+    margin: 130px 0 130px 120px;
 
     .top-title {
       @include top-title;
@@ -89,14 +89,132 @@ header {
 
     .main-title {
       @include main-title;
+      margin: 20px 0;
+      position: relative;
 
       span {
         color: $special-text-color;
+      }
+
+      &:before {
+        @include divider;
+        width: 10px;
+        left: 0;
+        bottom: -50px;
+      }
+
+      &:after {
+        @include divider;
+        width: 40px;
+        left: 20px;
+        bottom: -50px;
       }
     }
 
     .text {
       @include text;
+      margin: 100px 0 50px 0;
+    }
+
+    button {
+      @include black-button;
+      margin: 10px 0;
+    }
+
+    .socials {
+      text-transform: uppercase;
+      font-family: $title-font;
+      font-size: 13px;
+      font-weight: 700;
+      margin: 50px 0;
+
+      span {
+        padding: 0 5px;
+        cursor: pointer;
+      }
+    }
+
+    .slider-num {
+      @include slider-num;
+      z-index: 1;
+      position: absolute;
+      right: 45%;
+      bottom: 20%;
+
+        span {
+          color: #e5e3df;
+          padding: 8px 18px;
+          margin: 2px;
+          border-radius: 30px;
+          cursor: pointer;
+        }
+
+        span:first-child {
+          background: linear-gradient(269deg, #9be15d 0%, #00d9a6 100%);
+        }
+    }
+  }
+}
+
+.sect-1 {
+  background-color: $lighter-bg;
+  display: flex;
+  padding: $section-padding;
+
+  &-left {
+    width: 45%;
+    padding: 70px 90px;
+
+    .title {
+      @include title;
+      position: relative;
+
+      span {
+        color: $special-text-color;
+      }
+
+      &:before {
+        @include divider;
+        width: 10px;
+        left: 0;
+        bottom: -40px;
+      }
+
+      &:after {
+        @include divider;
+        width: 40px;
+        left: 20px;
+        bottom: -40px;
+      }
+    }
+
+    button {
+      @include green-button;
+      margin-top: 100px;
+    }
+  }
+
+  &-right {
+    width: 55%;
+    display: flex;
+    flex-wrap: wrap;
+
+    .box {
+      @include box;
+      width: calc(55% - 90px);
+
+      i {
+        font-size: 56px;
+        color: #555555;
+      }
+
+      .small-title {
+        @include small-title;
+      }
+
+      .text {
+        @include text;
+      }
     }
   }
 }
