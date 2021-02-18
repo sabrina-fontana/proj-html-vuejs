@@ -16,7 +16,10 @@
       <header>
         <!-- navbar top -->
         <div class="top-nav">
-          <div>(001) 88451234 88455438</div>
+          <div>
+            <span>(001) 88451234</span>
+            <span>88455438</span>
+          </div>
           <div>
             <i class="fab fa-facebook-f"></i>
             <i class="fab fa-twitter"></i>
@@ -24,9 +27,14 @@
           </div>
         </div>
         <!-- navbar -->
-        <nav>
-          <div class="nav-logo">
-            <img src="img/cropped-Group-39-2x.png" alt="">
+        <nav class="nav">
+          <img src="img/cropped-Group-39-2x.png" alt="">
+          <ul class="nav-links">
+            <li v-for="link in headerLinks">{{link}}</li>
+          </ul>
+          <div class="nav-button">
+            <button>purchase</button>
+            <i class="fas fa-search"></i>
           </div>
         </nav>
       </header>
@@ -37,6 +45,7 @@
       <footer>
       </footer>
     </div>
-
+    <script src="js/script.js" charset="utf-8"></script>
   </body>
+
 </html>

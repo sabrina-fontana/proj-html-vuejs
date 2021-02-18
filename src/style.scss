@@ -4,11 +4,58 @@
   padding: 0;
 }
 
+@import "_var";
+@import "_colors";
+
 header {
-  padding: 0 50px;
+  box-shadow: 0 4px 44px 0 rgb(0 0 0 / 14%);
+  font-size: $header-font-size;
 
   .top-nav {
-    display: flex;
-    justify-content: space-between;
+    @include header-display;
+    background: $top-nav-bg;
+    color: $top-nav-color;
+    font-family: $text-font;
+    padding: 12px 50px;
+
+    * {
+      margin: 0 7px;
+    }
+
+    i {
+      @include icons;
+    }
+  }
+
+  .nav {
+    @include header-display;
+    font-family: $title-font;
+    padding: 25px 50px;
+
+    img {
+      width: 200px;
+    }
+
+    ul {
+      list-style: none;
+
+      li {
+        @include nav-links;
+      }
+    }
+
+    &-button {
+
+      button {
+        @include green-button;
+        margin: 0 13px;
+      }
+
+      i {
+        @include icons;
+        color: #00d9a6;
+        margin: 0 13px;
+      }
+    }
   }
 }
