@@ -21,6 +21,11 @@
   }
 }
 
+@mixin selected-nav-link {
+  color: black;
+  font-weight: 600;
+}
+
 @mixin green-button {
   text-transform: uppercase;
   color: white;
@@ -32,6 +37,27 @@
   box-shadow: 6px 6px 25px 0 #00d9a660;
   padding: 16px 40px;
   cursor: pointer;
+}
+
+@mixin main-title {
+  font-family: $title-font;
+  font-size: 64px;
+  font-weight: 700;
+}
+
+@mixin top-title {
+  font-family: $title-font;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #9be15d;
+  letter-spacing: 6px;
+}
+
+@mixin text {
+  font-family: $text-font;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
 }
 
 $title-font: 'Quicksand', sans-serif;

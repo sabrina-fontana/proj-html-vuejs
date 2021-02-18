@@ -30,10 +30,12 @@ header {
   .nav {
     @include header-display;
     font-family: $title-font;
+    background: $nav-bg;
     padding: 25px 50px;
 
     img {
       width: 200px;
+      cursor: pointer;
     }
 
     ul {
@@ -41,6 +43,10 @@ header {
 
       li {
         @include nav-links;
+      }
+
+      li:first-child {
+        @include selected-nav-link;
       }
     }
 
@@ -56,6 +62,41 @@ header {
         color: #00d9a6;
         margin: 0 13px;
       }
+    }
+  }
+}
+
+.jumbotron {
+  overflow: hidden;
+  height: 800px;
+  position: relative;
+
+  img {
+    width: 1050px;
+    z-index: -1;
+    position: absolute;
+    top: -40px;
+    right: -180px;
+  }
+
+  &-content {
+    width: 700px;
+    margin-left: 130px;
+
+    .top-title {
+      @include top-title;
+    }
+
+    .main-title {
+      @include main-title;
+
+      span {
+        color: $special-text-color;
+      }
+    }
+
+    .text {
+      @include text;
     }
   }
 }
