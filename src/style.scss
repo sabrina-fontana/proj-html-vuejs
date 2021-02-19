@@ -34,10 +34,18 @@
 
 .green-button {
   @include green-button;
+  &:hover {
+    background: $black-gradient;
+    box-shadow: $black-shadow;
+  }
 }
 
 .black-button {
   @include black-button;
+  &:hover {
+    background: $green-gradient;
+    box-shadow: $green-shadow;
+  }
 }
 
 .footer-title {
@@ -491,15 +499,39 @@ header {
 }
 
 .footer {
+  color: $footer-color;
 
   &-content {
     background: $lighter-bg;
     display: flex;
-    padding: 0 50px;
+    padding: 130px 30px;
 
     .box {
       width: 25%;
-      padding: $section-padding;
+      padding: 0 20px;
+
+      .logo-img {
+        margin-bottom: 20px;
+        cursor: pointer;
+      }
+
+      ul {
+        list-style: none;
+        margin-top: 40px;
+
+        li {
+          cursor: pointer;
+          margin: 5px 0;
+        }
+      }
+
+      .contact {
+        margin-top: 40px;
+
+        div {
+          margin-bottom: 20px;
+        }
+      }
     }
 
     .map-img {

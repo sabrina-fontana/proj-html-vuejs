@@ -34,7 +34,7 @@
   border: none;
   border-radius: 40px;
   background: $green-gradient;
-  box-shadow: 6px 6px 25px 0 #00d9a660;
+  box-shadow: $green-shadow;
   padding: 16px 40px;
   cursor: pointer;
 }
@@ -47,7 +47,7 @@
   border: none;
   border-radius: 40px;
   background: $black-gradient;
-  box-shadow: 2px 2px 25px 0 #0c0c0c60;
+  box-shadow: $black-shadow;
   padding: 16px 40px;
   cursor: pointer;
 }

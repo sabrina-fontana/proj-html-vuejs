@@ -96,6 +96,10 @@
   padding: 16px 40px;
   cursor: pointer;
 }
+.green-button:hover {
+  background: linear-gradient(271deg, #0c0c0c 0%, #474747 100%);
+  box-shadow: 2px 2px 25px 0 #0c0c0c60;
+}
 
 .black-button {
   text-transform: uppercase;
@@ -108,6 +112,10 @@
   box-shadow: 2px 2px 25px 0 #0c0c0c60;
   padding: 16px 40px;
   cursor: pointer;
+}
+.black-button:hover {
+  background: linear-gradient(269deg, #00d9a6 0%, #9be15d 100%);
+  box-shadow: 6px 6px 25px 0 #00d9a660;
 }
 
 .footer-title {
@@ -559,14 +567,35 @@ header .nav-button i {
   cursor: pointer;
 }
 
+.footer {
+  color: #444;
+}
 .footer-content {
   background: #ffffff59;
   display: flex;
-  padding: 0 50px;
+  padding: 130px 30px;
 }
 .footer-content .box {
   width: 25%;
-  padding: 150px 0;
+  padding: 0 20px;
+}
+.footer-content .box .logo-img {
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.footer-content .box ul {
+  list-style: none;
+  margin-top: 40px;
+}
+.footer-content .box ul li {
+  cursor: pointer;
+  margin: 5px 0;
+}
+.footer-content .box .contact {
+  margin-top: 40px;
+}
+.footer-content .box .contact div {
+  margin-bottom: 20px;
 }
 .footer-content .map-img {
   width: 100%;

@@ -190,14 +190,22 @@
       <footer class="footer">
         <div class="footer-content">
           <div class="box">
-            <img src="img/cropped-Group-39-2x.png" alt="">
+            <img class="logo-img" src="img/cropped-Group-39-2x.png" alt="">
             <div class="text">While the lovely valley teems with vapour around me, and the meridian sun strikes the upper surface of the impenetrable foliage of my trees.While the lovely valley teems with vapour around me.</div>
           </div>
           <div class="box">
             <div class="footer-title">quick links</div>
+            <ul>
+              <li class="text" v-for="el in footerLinks">{{el.name}}</li>
+            </ul>
           </div>
           <div class="box">
             <div class="footer-title">contact</div>
+            <div class="contact text">
+              <div>Patricia C. Amedee 4401 Waldeck Street Grapevine Nashville, TX 76051</div>
+              <div>info@yourdomain.com</div>
+              <div>+99 (0) 101 0000 888</div>
+            </div>
           </div>
           <div class="box">
             <div class="footer-title">location on map</div>
