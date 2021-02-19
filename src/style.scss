@@ -7,7 +7,7 @@
 @import "_var";
 @import "_colors";
 
-// CLASSI UTILITY
+// *****INIZIO CLASSI UTILITY*****
 .top-title {
   @include top-title;
 }
@@ -34,28 +34,22 @@
 
 .green-button {
   @include green-button;
-  &:hover {
-    background: $black-gradient;
-    box-shadow: $black-shadow;
-  }
 }
 
 .black-button {
   @include black-button;
-  &:hover {
-    background: $green-gradient;
-    box-shadow: $green-shadow;
-  }
 }
 
 .footer-title {
   @include footer-title;
 }
+// *****FINE CLASSI UTILITY*****
 
 section {
   padding: $section-padding;
 }
 
+// *****INIZIO HEADER*****
 header {
   box-shadow: 0 4px 44px 0 rgb(0 0 0 / 14%);
   font-size: $header-font-size;
@@ -113,7 +107,9 @@ header {
     }
   }
 }
+// *****FINE HEADER*****
 
+// *****INIZIO JUMBOTRON*****
 .jumbotron {
   overflow: hidden;
   background-color: $darker-bg;
@@ -177,7 +173,9 @@ header {
     }
   }
 }
+// *****FINE JUMBOTRON*****
 
+// *****INIZIO SEZIONE 1*****
 .sect-1 {
   background-color: $lighter-bg;
   display: flex;
@@ -197,17 +195,18 @@ header {
     flex-wrap: wrap;
 
     .box {
-      @include box;
+      @include box-services;
       width: calc(55% - 90px);
 
       i {
         font-size: 56px;
-        color: #555555;
       }
     }
   }
 }
+// *****FINE SEZIONE 1*****
 
+// *****INIZIO SEZIONE 2*****
 .sect-2 {
   background-color: $darker-bg;
   display: flex;
@@ -244,7 +243,10 @@ header {
     }
   }
 }
+// *****FINE SEZIONE 2*****
 
+
+// *****INIZIO SEZIONE 3*****
 .sect-3 {
   background-color: $lighter-bg;
   margin: 0 20px;
@@ -296,7 +298,9 @@ header {
     margin: 50px 0;
   }
 }
+// *****FINE SEZIONE 3*****
 
+// *****INIZIO SEZIONE 4******
 .sect-4 {
   height: 800px;
   background-image: linear-gradient(271deg, #474747eb 0%, #0c0c0ceb 100%),
@@ -343,7 +347,9 @@ header {
     font-size: 20px;
   }
 }
+// *****FINE SEZIONE 4*****
 
+// *****INIZIO SEZIONE 5*****
 .sect-5 {
   background-color: $lighter-bg;
   display: flex;
@@ -416,7 +422,9 @@ header {
     margin-top: 80px;
   }
 }
+// *****FINE SEZIONE 5*****
 
+// *****INIZIO SEZIONE 6*****
 .sect-6 {
   background-image: linear-gradient($lighter-bg 20%, $darker-bg 40%);
   display: flex;
@@ -497,7 +505,9 @@ header {
     }
   }
 }
+// *****FINE SEZIONE 6*****
 
+// *****INIZIO FOOTER*****
 .footer {
   color: $footer-color;
 
@@ -557,3 +567,4 @@ header {
     }
   }
 }
+// *****FINE FOOTER*****

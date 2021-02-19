@@ -37,6 +37,30 @@
   box-shadow: $green-shadow;
   padding: 16px 40px;
   cursor: pointer;
+  position: relative;
+  z-index: 1;
+  transition: box-shadow .4s;
+  // ****linear grdient non supporta le transition!!
+  &:before {
+    background: $black-gradient;
+    box-shadow: $black-shadow;
+    border-radius: 40px;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity .4s;
+  }
+  &:hover:before {
+    opacity: 1;
+  }
+  &:hover {
+    box-shadow: $black-shadow;
+  }
 }
 
 @mixin black-button {
@@ -50,6 +74,30 @@
   box-shadow: $black-shadow;
   padding: 16px 40px;
   cursor: pointer;
+  position: relative;
+  z-index: 1;
+  transition: box-shadow .4s;
+  // ****linear grdient non supporta le transition!!
+  &:before {
+    background: $green-gradient;
+    box-shadow: $green-shadow;
+    border-radius: 40px;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity .4s;
+  }
+  &:hover:before {
+    opacity: 1;
+  }
+  &:hover {
+    box-shadow: $green-shadow;
+  }
 }
 
 @mixin top-title {
@@ -132,13 +180,37 @@
   align-items: center;
 }
 
-@mixin box {
+@mixin box-services {
   border-radius: 20px;
   box-shadow: 6px 6px 20px 0 #0c0c0c20;
   padding: 30px;
   margin: 20px;
+  transition: background 2s;
   > * {
     padding: 15px 0;
+  }
+  position: relative;
+  z-index: 1;
+  // ****linear grdient non supporta le transition!!
+  &:before {
+    background: $green-gradient;
+    box-shadow: $green-shadow;
+    border-radius: 20px;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity .5s;
+  }
+  &:hover:before {
+    opacity: 1;
+  }
+  &:hover {
+    color: #fff;
   }
 }
 

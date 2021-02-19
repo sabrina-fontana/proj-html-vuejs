@@ -95,9 +95,28 @@
   box-shadow: 6px 6px 25px 0 #00d9a660;
   padding: 16px 40px;
   cursor: pointer;
+  position: relative;
+  z-index: 1;
+  transition: box-shadow 0.4s;
+}
+.green-button:before {
+  background: linear-gradient(271deg, #0c0c0c 0%, #474747 100%);
+  box-shadow: 2px 2px 25px 0 #0c0c0c60;
+  border-radius: 40px;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+.green-button:hover:before {
+  opacity: 1;
 }
 .green-button:hover {
-  background: linear-gradient(271deg, #0c0c0c 0%, #474747 100%);
   box-shadow: 2px 2px 25px 0 #0c0c0c60;
 }
 
@@ -112,9 +131,28 @@
   box-shadow: 2px 2px 25px 0 #0c0c0c60;
   padding: 16px 40px;
   cursor: pointer;
+  position: relative;
+  z-index: 1;
+  transition: box-shadow 0.4s;
+}
+.black-button:before {
+  background: linear-gradient(269deg, #00d9a6 0%, #9be15d 100%);
+  box-shadow: 6px 6px 25px 0 #00d9a660;
+  border-radius: 40px;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+.black-button:hover:before {
+  opacity: 1;
 }
 .black-button:hover {
-  background: linear-gradient(269deg, #00d9a6 0%, #9be15d 100%);
   box-shadow: 6px 6px 25px 0 #00d9a660;
 }
 
@@ -293,14 +331,36 @@ header .nav-button i {
   box-shadow: 6px 6px 20px 0 #0c0c0c20;
   padding: 30px;
   margin: 20px;
+  transition: background 2s;
+  position: relative;
+  z-index: 1;
   width: calc(55% - 90px);
 }
 .sect-1-right .box > * {
   padding: 15px 0;
 }
+.sect-1-right .box:before {
+  background: linear-gradient(269deg, #00d9a6 0%, #9be15d 100%);
+  box-shadow: 6px 6px 25px 0 #00d9a660;
+  border-radius: 20px;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.sect-1-right .box:hover:before {
+  opacity: 1;
+}
+.sect-1-right .box:hover {
+  color: #fff;
+}
 .sect-1-right .box i {
   font-size: 56px;
-  color: #555555;
 }
 
 .sect-2 {
