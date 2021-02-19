@@ -273,7 +273,7 @@ header {
 
     img {
       width: 25%;
-      padding: 2px 5px;
+      padding: 1px 3px;
       border-radius: 10px;
     }
   }
@@ -282,5 +282,52 @@ header {
     display: flex;
     justify-content: center;
     margin: 50px 0;
+  }
+}
+
+.sect-4 {
+  height: 800px;
+  background-image: linear-gradient(271deg, #474747eb 0%, #0c0c0ceb 100%),
+  url('../img/four-businesspeople-in-a-boardroom-with-paperwork-PC4V8H4.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  i {
+    font-size: 60px;
+  }
+
+  .quote {
+    @include quote;
+    padding: 50px 0;
+    width: 55%;
+    line-height: 50px;
+  }
+
+  &-image {
+    min-width: 100px;
+    min-height: 100px;
+    border: 5px solid #f5f5f5;
+    border-radius: 50%;
+    background-image: url('../img/businesswoman-analysing-document-P8WSNMC-1024x820.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+
+  .name {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: $title-font;
+    padding: 40px 0 10px 0;
+  }
+
+  .role {
+    font-family: 'Nunito', sans-serif;
+    color: #f9f9f9;
+    font-size: 20px;
   }
 }
