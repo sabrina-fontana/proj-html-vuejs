@@ -397,3 +397,124 @@ header .nav-button i {
   color: #f9f9f9;
   font-size: 20px;
 }
+
+.sect-5 {
+  background-color: #ffffff59;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sect-5 .title {
+  margin: 0 0 50px 0;
+}
+.sect-5 .title:before {
+  left: 45%;
+}
+.sect-5 .title:after {
+  left: 49%;
+}
+.sect-5-content {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
+.sect-5-content .box {
+  width: calc(33% - 20px);
+  position: relative;
+  margin: 0 10px;
+}
+.sect-5-content .box img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 10px 10px 20px 10px #0c0c0c20;
+}
+.sect-5-content .box .post-info {
+  position: absolute;
+  z-index: 1;
+  bottom: -40px;
+  left: 10%;
+  background-color: #fff;
+  width: 80%;
+  border-radius: 5px;
+  padding: 30px 20px;
+  box-shadow: 5px 5px 20px 0 #0c0c0c20;
+}
+.sect-5-content .box .post-info .post-date {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: #aaa;
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+.sect-5-content .box .post-info .post-title {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+}
+.sect-5-content .box .post-info .post-title i {
+  padding-right: 6px;
+  font-size: 10px;
+  vertical-align: middle;
+}
+.sect-5 button {
+  margin-top: 80px;
+}
+
+.sect-6 {
+  background-image: linear-gradient(#ffffff59 20%, #f9f9f9 40%);
+  display: flex;
+}
+.sect-6-box {
+  width: 50%;
+  padding: 50px 0;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.sect-6-box .box-text {
+  font-family: "Quicksand", sans-serif;
+  color: #e5e3df;
+}
+.sect-6-box .box-title {
+  font-family: "Quicksand", sans-serif;
+  color: #f5f5f5;
+  font-size: 32px;
+  font-weight: 600;
+  padding: 20px 0 60px 0;
+}
+.sect-6-box .dark-input {
+  width: 60%;
+  border-radius: 40px;
+  background: linear-gradient(271deg, #555 0%, #444 100%);
+  box-shadow: 2px 2px 25px 0 #0c0c0c60;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.sect-6-box .dark-input > * {
+  font-family: "Quicksand", sans-serif;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+.sect-6-box .dark-input input {
+  width: 80%;
+  color: white;
+  font-weight: 600;
+}
+.sect-6-box .dark-input button {
+  text-transform: uppercase;
+  color: #f5f5f5;
+}
+.sect-6 .box-1 {
+  background: linear-gradient(271deg, #0c0c0c 0%, #474747 100%);
+  margin: 10px 10px 10px 20px;
+}
+.sect-6 .box-2 {
+  background: linear-gradient(269deg, #9be15d 0%, #00d9a6 100%);
+  margin: 10px 20px 10px 10px;
+}
