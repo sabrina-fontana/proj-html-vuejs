@@ -33,7 +33,7 @@
   font-weight: 500;
   border: none;
   border-radius: 40px;
-  background: linear-gradient(269deg, #00d9a6 0%, #9be15d 100%);
+  background: $green-gradient;
   box-shadow: 6px 6px 25px 0 #00d9a660;
   padding: 16px 40px;
   cursor: pointer;
@@ -65,12 +65,38 @@
   font-size: 62px;
   font-weight: 700;
   line-height: 62px;
+  position: relative;
+  &:before {
+    @include divider;
+    width: 10px;
+    left: 0;
+    bottom: -40px;
+  }
+  &:after {
+    @include divider;
+    width: 40px;
+    left: 20px;
+    bottom: -40px;
+  }
 }
 
 @mixin title {
   font-family: $title-font;
   font-size: 50px;
   font-weight: 600;
+  position: relative;
+  &:before {
+    @include divider;
+    width: 10px;
+    left: 0;
+    bottom: -40px;
+  }
+  &:after {
+    @include divider;
+    width: 40px;
+    left: 20px;
+    bottom: -40px;
+  }
 }
 
 @mixin small-title {
@@ -89,7 +115,7 @@
 @mixin divider {
   content: '';
   height: 5px;
-  background: linear-gradient(269deg, #00d9a6 0%, #9be15d 100%);
+  background: $green-gradient;
   border-radius: 5px;
   position: absolute;
 }
@@ -121,4 +147,4 @@ $text-font: 'Ubuntu', sans-serif;
 
 $header-font-size: 14px;
 
-$section-padding: 120px 0;
+$section-padding: 140px 0;

@@ -4,6 +4,116 @@
   padding: 0;
 }
 
+.top-title {
+  font-family: "Quicksand", sans-serif;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #9be15d;
+  letter-spacing: 6px;
+}
+
+.main-title {
+  font-family: "Quicksand", sans-serif;
+  font-size: 62px;
+  font-weight: 700;
+  line-height: 62px;
+  position: relative;
+}
+.main-title:before {
+  content: "";
+  height: 5px;
+  background: linear-gradient(269deg, #00d9a6 0%, #9be15d 100%);
+  border-radius: 5px;
+  position: absolute;
+  width: 10px;
+  left: 0;
+  bottom: -40px;
+}
+.main-title:after {
+  content: "";
+  height: 5px;
+  background: linear-gradient(269deg, #00d9a6 0%, #9be15d 100%);
+  border-radius: 5px;
+  position: absolute;
+  width: 40px;
+  left: 20px;
+  bottom: -40px;
+}
+
+.title {
+  font-family: "Quicksand", sans-serif;
+  font-size: 50px;
+  font-weight: 600;
+  position: relative;
+}
+.title:before {
+  content: "";
+  height: 5px;
+  background: linear-gradient(269deg, #00d9a6 0%, #9be15d 100%);
+  border-radius: 5px;
+  position: absolute;
+  width: 10px;
+  left: 0;
+  bottom: -40px;
+}
+.title:after {
+  content: "";
+  height: 5px;
+  background: linear-gradient(269deg, #00d9a6 0%, #9be15d 100%);
+  border-radius: 5px;
+  position: absolute;
+  width: 40px;
+  left: 20px;
+  bottom: -40px;
+}
+
+.small-title {
+  font-family: "Quicksand", sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.text {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.special-text {
+  color: #00d9a6;
+}
+
+.green-button {
+  text-transform: uppercase;
+  color: white;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  border: none;
+  border-radius: 40px;
+  background: linear-gradient(269deg, #00d9a6 0%, #9be15d 100%);
+  box-shadow: 6px 6px 25px 0 #00d9a660;
+  padding: 16px 40px;
+  cursor: pointer;
+}
+
+.black-button {
+  text-transform: uppercase;
+  color: white;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  border: none;
+  border-radius: 40px;
+  background: linear-gradient(271deg, #0c0c0c 0%, #474747 100%);
+  box-shadow: 2px 2px 25px 0 #0c0c0c60;
+  padding: 16px 40px;
+  cursor: pointer;
+}
+
+section {
+  padding: 140px 0;
+}
+
 header {
   box-shadow: 0 4px 44px 0 rgba(0, 0, 0, 0.14);
   font-size: 14px;
@@ -55,16 +165,6 @@ header .nav ul li:first-child {
   font-weight: 600;
 }
 header .nav-button button {
-  text-transform: uppercase;
-  color: white;
-  font-family: "Quicksand", sans-serif;
-  font-weight: 500;
-  border: none;
-  border-radius: 40px;
-  background: linear-gradient(269deg, #00d9a6 0%, #9be15d 100%);
-  box-shadow: 6px 6px 25px 0 #00d9a660;
-  padding: 16px 40px;
-  cursor: pointer;
   margin: 0 13px;
 }
 header .nav-button i {
@@ -90,62 +190,13 @@ header .nav-button i {
   width: 650px;
   margin: 130px 0 130px 120px;
 }
-.jumbotron-content .top-title {
-  font-family: "Quicksand", sans-serif;
-  text-transform: uppercase;
-  font-weight: 600;
-  color: #9be15d;
-  letter-spacing: 6px;
-}
 .jumbotron-content .main-title {
-  font-family: "Quicksand", sans-serif;
-  font-size: 62px;
-  font-weight: 700;
-  line-height: 62px;
   margin: 20px 0;
-  position: relative;
-}
-.jumbotron-content .main-title span {
-  color: #00d9a6;
-}
-.jumbotron-content .main-title:before {
-  content: "";
-  height: 5px;
-  background: linear-gradient(269deg, #00d9a6 0%, #9be15d 100%);
-  border-radius: 5px;
-  position: absolute;
-  width: 10px;
-  left: 0;
-  bottom: -50px;
-}
-.jumbotron-content .main-title:after {
-  content: "";
-  height: 5px;
-  background: linear-gradient(269deg, #00d9a6 0%, #9be15d 100%);
-  border-radius: 5px;
-  position: absolute;
-  width: 40px;
-  left: 20px;
-  bottom: -50px;
 }
 .jumbotron-content .text {
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 24px;
   margin: 100px 0 50px 0;
 }
 .jumbotron-content button {
-  text-transform: uppercase;
-  color: white;
-  font-family: "Quicksand", sans-serif;
-  font-weight: 500;
-  border: none;
-  border-radius: 40px;
-  background: linear-gradient(271deg, #0c0c0c 0%, #474747 100%);
-  box-shadow: 2px 2px 25px 0 #0c0c0c60;
-  padding: 16px 40px;
-  cursor: pointer;
   margin: 10px 0;
 }
 .jumbotron-content .socials {
@@ -188,52 +239,12 @@ header .nav-button i {
 .sect-1 {
   background-color: #ffffff59;
   display: flex;
-  padding: 120px 0;
 }
 .sect-1-left {
   width: 45%;
   padding: 70px 90px;
 }
-.sect-1-left .title {
-  font-family: "Quicksand", sans-serif;
-  font-size: 50px;
-  font-weight: 600;
-  position: relative;
-}
-.sect-1-left .title span {
-  color: #00d9a6;
-}
-.sect-1-left .title:before {
-  content: "";
-  height: 5px;
-  background: linear-gradient(269deg, #00d9a6 0%, #9be15d 100%);
-  border-radius: 5px;
-  position: absolute;
-  width: 10px;
-  left: 0;
-  bottom: -40px;
-}
-.sect-1-left .title:after {
-  content: "";
-  height: 5px;
-  background: linear-gradient(269deg, #00d9a6 0%, #9be15d 100%);
-  border-radius: 5px;
-  position: absolute;
-  width: 40px;
-  left: 20px;
-  bottom: -40px;
-}
 .sect-1-left button {
-  text-transform: uppercase;
-  color: white;
-  font-family: "Quicksand", sans-serif;
-  font-weight: 500;
-  border: none;
-  border-radius: 40px;
-  background: linear-gradient(269deg, #00d9a6 0%, #9be15d 100%);
-  box-shadow: 6px 6px 25px 0 #00d9a660;
-  padding: 16px 40px;
-  cursor: pointer;
   margin-top: 100px;
 }
 .sect-1-right {
@@ -255,14 +266,88 @@ header .nav-button i {
   font-size: 56px;
   color: #555555;
 }
-.sect-1-right .box .small-title {
-  font-family: "Quicksand", sans-serif;
-  font-size: 30px;
-  font-weight: 500;
+
+.sect-2 {
+  background-color: #f9f9f9;
+  display: flex;
 }
-.sect-1-right .box .text {
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 24px;
+.sect-2 .images {
+  width: 50%;
+}
+.sect-2 .images .under-img {
+  position: absolute;
+  left: -50px;
+  border-radius: 20px;
+  z-index: 0;
+  width: 600px;
+  height: 450px;
+  background-image: linear-gradient(269deg, #00d9a6d9 0%, #9be15dd9 100%), url("../img/busy-architect-PYVKWM4-1024x872.jpg");
+  background-size: contain;
+}
+.sect-2 .images .over-img {
+  position: relative;
+  border-radius: 20px;
+  left: 80px;
+  top: 60px;
+  width: 600px;
+}
+.sect-2-content {
+  width: 50%;
+  padding: 80px 50px;
+}
+.sect-2-content .text {
+  margin: 80px 0 40px 0;
+}
+
+.sect-3 {
+  background-color: #ffffff59;
+  margin: 0 20px;
+}
+.sect-3-content {
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+}
+.sect-3-content:before {
+  content: "";
+  height: 5px;
+  background: linear-gradient(269deg, #00d9a6 0%, #9be15d 100%);
+  border-radius: 5px;
+  position: absolute;
+  width: 10px;
+  left: 20px;
+  top: -20px;
+}
+.sect-3-content:after {
+  content: "";
+  height: 5px;
+  background: linear-gradient(269deg, #00d9a6 0%, #9be15d 100%);
+  border-radius: 5px;
+  position: absolute;
+  width: 40px;
+  left: 40px;
+  top: -20px;
+}
+.sect-3-content .title {
+  width: 50%;
+  margin: 20px 5px 20px 20px;
+}
+.sect-3-content .text {
+  width: 50%;
+  margin: 20px 20px 20px 5px;
+}
+.sect-3-images {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 80px 0;
+}
+.sect-3-images img {
+  width: 25%;
+  padding: 2px 5px;
+  border-radius: 10px;
+}
+.sect-3-button {
+  display: flex;
+  justify-content: center;
+  margin: 50px 0;
 }
