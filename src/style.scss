@@ -40,6 +40,10 @@
   @include black-button;
 }
 
+.footer-title {
+  @include footer-title;
+}
+
 section {
   padding: $section-padding;
 }
@@ -408,9 +412,10 @@ header {
 .sect-6 {
   background-image: linear-gradient($lighter-bg 20%, $darker-bg 40%);
   display: flex;
+  flex-wrap: wrap;
 
   &-box {
-    width: 50%;
+    width: calc(50% - 30px);
     padding: 50px 0;
     border-radius: 10px;
     display: flex;
@@ -442,14 +447,13 @@ header {
 
       > * {
         font-family: $title-font;
-        cursor: pointer;
         border: none;
         outline: none;
         background-color: transparent;
       }
 
       input {
-        width: 80%;
+        width: 60%;
         color: white;
         font-weight: 600;
       }
@@ -457,6 +461,7 @@ header {
       button {
         text-transform: uppercase;
         color: #f5f5f5;
+        cursor: pointer;
       }
     }
   }
@@ -469,5 +474,54 @@ header {
   .box-2 {
     background: $green-gradient-reverse;
     margin: 10px 20px 10px 10px;
+  }
+
+  .brands {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 80px;
+
+    img {
+      width: 100px;
+      cursor: pointer;
+    }
+  }
+}
+
+.footer {
+
+  &-content {
+    background: $lighter-bg;
+    display: flex;
+    padding: 0 50px;
+
+    .box {
+      width: 25%;
+      padding: $section-padding;
+    }
+
+    .map-img {
+      width: 100%;
+      margin-top: 50px;
+      cursor: pointer;
+    }
+  }
+
+  &-bottom {
+    background: $black-gradient;
+    display: flex;
+    justify-content: space-between;
+    color: #aaa;
+    font-family: $text-font;
+    font-size: 13px;
+    padding: 40px 50px;
+
+    i {
+      margin: 0 5px;
+      font-size: 15px;
+      cursor: pointer;
+    }
   }
 }
