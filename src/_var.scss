@@ -214,6 +214,28 @@
   }
 }
 
+@mixin project-title {
+  font-family: $title-font;
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+}
+
+@mixin project-links {
+  font-family: $title-font;
+  font-weight: 600;
+  font-size: 13px;
+  color: #fff;
+  text-transform: uppercase;
+
+  i {
+    font-size: 3px;
+    color: #aaa;
+    padding: 0 5px;
+    vertical-align: middle;
+  }
+}
+
 @mixin quote {
   font-family: 'Nunito', sans-serif;
   font-style: italic;

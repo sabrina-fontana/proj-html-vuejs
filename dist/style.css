@@ -73,6 +73,27 @@
   font-weight: 500;
 }
 
+.project-title {
+  font-family: "Quicksand", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.project-links {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  color: #fff;
+  text-transform: uppercase;
+}
+.project-links i {
+  font-size: 3px;
+  color: #aaa;
+  padding: 0 5px;
+  vertical-align: middle;
+}
+
 .text {
   font-family: "Ubuntu", sans-serif;
   font-weight: 300;
@@ -447,7 +468,10 @@ header .nav-button i {
   z-index: 1;
 }
 .sect-3-images .project-img:hover .hover-text {
-  opacity: 0.9;
+  opacity: 1;
+}
+.sect-3-images .project-img:hover .hover-text * {
+  top: 0;
 }
 .sect-3-images .project-img img {
   width: 100%;
@@ -458,13 +482,24 @@ header .nav-button i {
 .sect-3-images .project-img .hover-text {
   opacity: 0;
   transition: opacity 1s;
-  background: linear-gradient(269deg, #00d9a6 0%, #9be15d 100%);
+  background: linear-gradient(269deg, #00d9a6d9 0%, #9be15dd9 100%);
   width: calc(100% - 4px);
   height: calc(100% - 4px);
+  padding: 50px 40px;
   border-radius: 10px;
   position: absolute;
   top: 2px;
   left: 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.sect-3-images .project-img .hover-text > * {
+  padding-top: 10px;
+  cursor: pointer;
+  position: relative;
+  top: 120px;
+  transition: top 0.7s;
 }
 .sect-3-button {
   display: flex;

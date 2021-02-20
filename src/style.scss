@@ -24,6 +24,14 @@
   @include small-title;
 }
 
+.project-title {
+  @include project-title;
+}
+
+.project-links {
+  @include project-links;
+}
+
 .text {
   @include text;
 }
@@ -295,7 +303,11 @@ header {
         z-index: 1;
 
         .hover-text {
-          opacity: 0.9;
+          opacity: 1;
+
+          * {
+            top: 0;
+          }
         }
       }
 
@@ -309,14 +321,26 @@ header {
       .hover-text {
         opacity: 0;
         transition: opacity 1s;
-        background: $green-gradient;
+        background: linear-gradient(269deg, #00d9a6d9 0%, #9be15dd9 100%);
         // la grandezza dev'essere uguale a quella dell'img (quindi sottraggo i padding)
         width: calc(100% - 4px);
         height: calc(100% - 4px);
+        padding: 50px 40px;
         border-radius: 10px;
         position: absolute;
         top: 2px;
         left: 2px;
+        display: flex;
+        flex-direction:  column;
+        justify-content: flex-end;
+
+        > * {
+          padding-top: 10px;
+          cursor: pointer;
+          position: relative;
+          top: 120px;
+          transition: top .7s;
+        }
       }
     }
   }
