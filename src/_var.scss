@@ -4,6 +4,21 @@
   align-items: center;
 }
 
+@mixin flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-space-btw {
+  display: flex;
+  justify-content: space-between;
+}
+
 @mixin icons {
   cursor: pointer;
   font-size: 17px;
@@ -15,7 +30,6 @@
   text-transform: uppercase;
   display: inline-block;
   margin: 0 15px;
-  cursor: pointer;
   &:hover {
     color: $text-hover-color;
   }
@@ -36,7 +50,6 @@
   background: $green-gradient;
   box-shadow: $green-shadow;
   padding: 16px 40px;
-  cursor: pointer;
   position: relative;
   z-index: 1;
   transition: box-shadow .4s;
@@ -73,7 +86,6 @@
   background: $black-gradient;
   box-shadow: $black-shadow;
   padding: 16px 40px;
-  cursor: pointer;
   position: relative;
   z-index: 1;
   transition: box-shadow .4s;
@@ -212,6 +224,23 @@
   &:hover {
     color: #fff;
   }
+}
+
+@mixin project-box {
+  width: 25%;
+  transition: transform .3s;
+  position: relative;
+  &:hover {
+    transform: scale(1.15);
+    z-index: 1;
+  }
+}
+
+@mixin project-hover {
+  opacity: 0;
+  transition: opacity 1s;
+  background: linear-gradient(269deg, #00d9a6d9 0%, #9be15dd9 100%);
+
 }
 
 @mixin project-title {
