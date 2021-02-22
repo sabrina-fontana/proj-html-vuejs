@@ -62,6 +62,15 @@ data: {
   defaultText: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. Separated they live in Bookmarksgrove.',
   defaultShortText: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated...'
 },
+mounted() {
+  setInterval(() => {
+    if (this.currSliderIndex < this.sliderImgs.length - 1) {
+      this.currSliderIndex += 1;
+    } else {
+      this.currSliderIndex = 0;
+    }
+  }, 4000)
+},
 methods: {
   changeImg: function(index) {
     return this.currSliderIndex = index;

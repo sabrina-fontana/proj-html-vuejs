@@ -2,12 +2,14 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel='shortcut icon' type='image/x-icon' href="img/favicon-16x16.ico">
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;1,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="dist/style.css">
     <title>Phlox</title>
   </head>
@@ -48,12 +50,16 @@
         <div class="jumbotron">
           <div class="jumbotron-content">
             <div class="top-title">17 years of experience</div>
-            <div class="main-title">We Are a<br> Web Design <span class="special-text">Agency</span></div>
+
+            <div v-if="currSliderIndex === 0" class="main-title">We Are a<br> Web Design <span class="special-text">Agency</span></div>
+            <div v-if="currSliderIndex === 1" class="main-title">Focus on Your<br><span class="special-text">Business</span></div>
+            <div v-if="currSliderIndex === 2" class="main-title">A Group of<br> Expert <span class="special-text">Planners</span></div>
+
             <div class="text">{{defaultText}}</div>
             <button class="black-button">read more</button>
             <div class="socials"><span>facebook</span> - <span>instagram</span> - <span>youtube</span> - <span>twitter</span></div>
             <div class="slider-num">
-              <span :class="{'selected' : index === currSliderIndex}" v-for="(image, index) in sliderImgs" @click="changeImg(index)">{{(index + 1).toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false})}}</span>
+              <span :class="{'selected' : index === currSliderIndex}" v-for="(image, index) in sliderImgs" @click="changeImg(index)">{{(index + 1).toLocaleString('en-US', {minimumIntegerDigits: 2})}}</span>
             </div>
           </div>
           <img :src="sliderImgs[currSliderIndex]">

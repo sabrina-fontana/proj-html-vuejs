@@ -260,12 +260,30 @@ header .nav-button i {
   top: -40px;
   right: -220px;
 }
+@-webkit-keyframes slide-top {
+  0% {
+    transform: translateY(100px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes slide-top {
+  0% {
+    transform: translateY(100px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
 .jumbotron-content {
   width: 650px;
   margin: 130px 0 130px 120px;
 }
 .jumbotron-content .main-title {
   margin: 20px 0;
+  -webkit-animation: slide-top 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+          animation: slide-top 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .jumbotron-content .text {
   margin: 100px 0 50px 0;
@@ -305,9 +323,23 @@ header .nav-button i {
   margin: 2px;
   border-radius: 30px;
   cursor: pointer;
+  position: relative;
 }
-.jumbotron-content .slider-num span.selected {
-  background: linear-gradient(269deg, #9be15d 0%, #00d9a6 100%);
+.jumbotron-content .slider-num span:before {
+  background: linear-gradient(269deg, #00d9a6 0%, #9be15d 100%);
+  border-radius: 30px;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
+.jumbotron-content .slider-num span.selected:before {
+  opacity: 1;
 }
 
 .sect-1 {
