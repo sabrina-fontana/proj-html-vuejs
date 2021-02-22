@@ -40,15 +40,15 @@
   font-weight: 600;
 }
 
-@mixin green-button {
+@mixin color1-button {
   text-transform: uppercase;
   color: white;
   font-family: $title-font;
   font-weight: 500;
   border: none;
   border-radius: 40px;
-  background: $green-gradient;
-  box-shadow: $green-shadow;
+  background: $color1-gradient;
+  box-shadow: $color1-shadow;
   padding: 16px 40px;
   position: relative;
   z-index: 1;
@@ -91,8 +91,8 @@
   transition: box-shadow .4s;
   // ****linear grdient non supporta le transition!!
   &:before {
-    background: $green-gradient;
-    box-shadow: $green-shadow;
+    background: $color1-gradient;
+    box-shadow: $color1-shadow;
     border-radius: 40px;
     content: "";
     width: 100%;
@@ -108,7 +108,7 @@
     opacity: 1;
   }
   &:hover {
-    box-shadow: $green-shadow;
+    box-shadow: $color1-shadow;
   }
 }
 
@@ -116,7 +116,7 @@
   font-family: $title-font;
   text-transform: uppercase;
   font-weight: 600;
-  color: #9be15d;
+  color: $color2;
   letter-spacing: 6px;
 }
 
@@ -175,7 +175,7 @@
 @mixin divider {
   content: '';
   height: 5px;
-  background: $green-gradient;
+  background: $color1-gradient;
   border-radius: 5px;
   position: absolute;
 }
@@ -204,8 +204,8 @@
   z-index: 1;
   // ****linear grdient non supporta le transition!!
   &:before {
-    background: $green-gradient;
-    box-shadow: $green-shadow;
+    background: $color2-gradient;
+    box-shadow: $color1-shadow;
     border-radius: 20px;
     content: "";
     width: 100%;
@@ -238,7 +238,7 @@
 @mixin project-hover {
   opacity: 0;
   transition: opacity 1s;
-  background: linear-gradient(269deg, #00d9a6d9 0%, #9be15dd9 100%);
+  background: $color2-gradient-faded;
 
 }
 

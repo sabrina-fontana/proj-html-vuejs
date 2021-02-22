@@ -6,17 +6,23 @@ $darker-bg: #f9f9f9;
 $top-nav-color: #ffffff;
 $nav-color: #3d3d3d;
 $text-hover-color: #aaaaaa;
-$special-text-color: #00d9a6;
-// #d2405d
+$color1: #d2405d;
+$color2: #723341;
+$color1-faded: #d2405de6;
+$color1-trn: #d2405d66;
+$color2-faded: #723341e6;
 
-$green-gradient: linear-gradient(269deg, #00d9a6 0%, #9be15d 100%);
-$green-gradient-reverse: linear-gradient(269deg, #9be15d 0%, #00d9a6 100%);
-$green-gradient-faded: linear-gradient(217deg, #00d9a6d9 0%, #9be15dd9 100%);
-$green-shadow: 6px 6px 25px 0 #00d9a660;
+// colori iniziali : #00x9a6 e #9be15d;
+
+$color1-gradient: linear-gradient(269deg, $color2 0%, $color1 100%);
+$color2-gradient: linear-gradient(269deg, $color1 0%, $color2 100%);
+$color1-gradient-faded: linear-gradient(217deg, $color1-faded 0%, $color2-faded 100%);
+$color2-gradient-faded: linear-gradient(217deg, $color2-faded 0%, $color1-faded 100%);
+$color1-shadow: 6px 6px 25px 0 $color1-trn;
 
 $black-gradient: linear-gradient(271deg, #0c0c0c 0%, #474747 100%);
 $black-gradient-reverse: linear-gradient(271deg, #474747 0%, #0c0c0c 100%);
-$black-gradient-faded: linear-gradient(271deg, #474747eb 0%, #0c0c0ceb 100%);
-$black-shadow: 2px 2px 25px 0 #0c0c0c60;
+$black-gradient-faded: linear-gradient(271deg, #474747ed 0%, #0c0c0ced 100%);
+$black-shadow: 2px 2px 15px 0 #0c0c0c60;
 
 $footer-color: #444;

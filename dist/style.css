@@ -8,7 +8,7 @@
   font-family: "Quicksand", sans-serif;
   text-transform: uppercase;
   font-weight: 600;
-  color: #9be15d;
+  color: #723341;
   letter-spacing: 6px;
 }
 
@@ -22,7 +22,7 @@
 .main-title:before {
   content: "";
   height: 5px;
-  background: linear-gradient(269deg, #00d9a6 0%, #9be15d 100%);
+  background: linear-gradient(269deg, #723341 0%, #d2405d 100%);
   border-radius: 5px;
   position: absolute;
   width: 10px;
@@ -32,7 +32,7 @@
 .main-title:after {
   content: "";
   height: 5px;
-  background: linear-gradient(269deg, #00d9a6 0%, #9be15d 100%);
+  background: linear-gradient(269deg, #723341 0%, #d2405d 100%);
   border-radius: 5px;
   position: absolute;
   width: 40px;
@@ -49,7 +49,7 @@
 .title:before {
   content: "";
   height: 5px;
-  background: linear-gradient(269deg, #00d9a6 0%, #9be15d 100%);
+  background: linear-gradient(269deg, #723341 0%, #d2405d 100%);
   border-radius: 5px;
   position: absolute;
   width: 10px;
@@ -59,7 +59,7 @@
 .title:after {
   content: "";
   height: 5px;
-  background: linear-gradient(269deg, #00d9a6 0%, #9be15d 100%);
+  background: linear-gradient(269deg, #723341 0%, #d2405d 100%);
   border-radius: 5px;
   position: absolute;
   width: 40px;
@@ -81,26 +81,26 @@
 }
 
 .special-text {
-  color: #00d9a6;
+  color: #d2405d;
 }
 
-.green-button {
+.color1-button {
   text-transform: uppercase;
   color: white;
   font-family: "Quicksand", sans-serif;
   font-weight: 500;
   border: none;
   border-radius: 40px;
-  background: linear-gradient(269deg, #00d9a6 0%, #9be15d 100%);
-  box-shadow: 6px 6px 25px 0 #00d9a660;
+  background: linear-gradient(269deg, #723341 0%, #d2405d 100%);
+  box-shadow: 6px 6px 25px 0 #d2405d66;
   padding: 16px 40px;
   position: relative;
   z-index: 1;
   transition: box-shadow 0.4s;
 }
-.green-button:before {
+.color1-button:before {
   background: linear-gradient(271deg, #0c0c0c 0%, #474747 100%);
-  box-shadow: 2px 2px 25px 0 #0c0c0c60;
+  box-shadow: 2px 2px 15px 0 #0c0c0c60;
   border-radius: 40px;
   content: "";
   width: 100%;
@@ -112,11 +112,11 @@
   opacity: 0;
   transition: opacity 0.4s;
 }
-.green-button:hover:before {
+.color1-button:hover:before {
   opacity: 1;
 }
-.green-button:hover {
-  box-shadow: 2px 2px 25px 0 #0c0c0c60;
+.color1-button:hover {
+  box-shadow: 2px 2px 15px 0 #0c0c0c60;
 }
 
 .black-button {
@@ -127,15 +127,15 @@
   border: none;
   border-radius: 40px;
   background: linear-gradient(271deg, #0c0c0c 0%, #474747 100%);
-  box-shadow: 2px 2px 25px 0 #0c0c0c60;
+  box-shadow: 2px 2px 15px 0 #0c0c0c60;
   padding: 16px 40px;
   position: relative;
   z-index: 1;
   transition: box-shadow 0.4s;
 }
 .black-button:before {
-  background: linear-gradient(269deg, #00d9a6 0%, #9be15d 100%);
-  box-shadow: 6px 6px 25px 0 #00d9a660;
+  background: linear-gradient(269deg, #723341 0%, #d2405d 100%);
+  box-shadow: 6px 6px 25px 0 #d2405d66;
   border-radius: 40px;
   content: "";
   width: 100%;
@@ -151,7 +151,7 @@
   opacity: 1;
 }
 .black-button:hover {
-  box-shadow: 6px 6px 25px 0 #00d9a660;
+  box-shadow: 6px 6px 25px 0 #d2405d66;
 }
 
 .footer-title {
@@ -164,7 +164,7 @@
 .footer-title:before {
   content: "";
   height: 5px;
-  background: linear-gradient(269deg, #00d9a6 0%, #9be15d 100%);
+  background: linear-gradient(269deg, #723341 0%, #d2405d 100%);
   border-radius: 5px;
   position: absolute;
   width: 10px;
@@ -174,7 +174,7 @@
 .footer-title:after {
   content: "";
   height: 5px;
-  background: linear-gradient(269deg, #00d9a6 0%, #9be15d 100%);
+  background: linear-gradient(269deg, #723341 0%, #d2405d 100%);
   border-radius: 5px;
   position: absolute;
   width: 40px;
@@ -244,7 +244,7 @@ header .nav-button button {
 header .nav-button i {
   cursor: pointer;
   font-size: 17px;
-  color: #00d9a6;
+  color: #d2405d;
   margin: 0 13px;
 }
 
@@ -259,6 +259,34 @@ header .nav-button i {
   position: absolute;
   top: -40px;
   right: -220px;
+  -webkit-animation: slide-in-right 0.8s ease-out;
+          animation: slide-in-right 0.8s ease-out;
+}
+@-webkit-keyframes slide-in-right {
+  0% {
+    transform: translateX(150px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-right {
+  0% {
+    transform: translateX(150px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 @-webkit-keyframes slide-top {
   0% {
@@ -326,7 +354,7 @@ header .nav-button i {
   position: relative;
 }
 .jumbotron-content .slider-num span:before {
-  background: linear-gradient(269deg, #00d9a6 0%, #9be15d 100%);
+  background: linear-gradient(269deg, #723341 0%, #d2405d 100%);
   border-radius: 30px;
   content: "";
   width: 100%;
@@ -371,8 +399,8 @@ header .nav-button i {
   padding: 15px 0;
 }
 .sect-1-right .box:before {
-  background: linear-gradient(269deg, #00d9a6 0%, #9be15d 100%);
-  box-shadow: 6px 6px 25px 0 #00d9a660;
+  background: linear-gradient(269deg, #d2405d 0%, #723341 100%);
+  box-shadow: 6px 6px 25px 0 #d2405d66;
   border-radius: 20px;
   content: "";
   width: 100%;
@@ -401,6 +429,15 @@ header .nav-button i {
 .sect-2 .images {
   width: 50%;
 }
+.sect-2 .images:hover .under-img {
+  left: -10px;
+}
+.sect-2 .images:hover .over-img-container {
+  left: 120px;
+}
+.sect-2 .images:hover .over-img {
+  transform: scale(1.1);
+}
 .sect-2 .images .under-img {
   position: absolute;
   left: -50px;
@@ -408,15 +445,24 @@ header .nav-button i {
   z-index: 0;
   width: 600px;
   height: 450px;
-  background-image: linear-gradient(269deg, #00d9a6d9 0%, #9be15dd9 100%), url("../img/busy-architect-PYVKWM4-1024x872.jpg");
+  background-image: linear-gradient(217deg, #723341e6 0%, #d2405de6 100%), url("../img/busy-architect-PYVKWM4-1024x872.jpg");
   background-size: contain;
+  transition: left 0.5s;
 }
-.sect-2 .images .over-img {
+.sect-2 .images .over-img-container {
+  width: 550px;
+  height: 450px;
   position: relative;
   border-radius: 20px;
   left: 80px;
   top: 60px;
-  width: 600px;
+  overflow: hidden;
+  transition: left 0.5s;
+}
+.sect-2 .images .over-img-container .over-img {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s;
 }
 .sect-2-content {
   width: 50%;
@@ -438,7 +484,7 @@ header .nav-button i {
 .sect-3-content:before {
   content: "";
   height: 5px;
-  background: linear-gradient(269deg, #00d9a6 0%, #9be15d 100%);
+  background: linear-gradient(269deg, #723341 0%, #d2405d 100%);
   border-radius: 5px;
   position: absolute;
   width: 10px;
@@ -448,7 +494,7 @@ header .nav-button i {
 .sect-3-content:after {
   content: "";
   height: 5px;
-  background: linear-gradient(269deg, #00d9a6 0%, #9be15d 100%);
+  background: linear-gradient(269deg, #723341 0%, #d2405d 100%);
   border-radius: 5px;
   position: absolute;
   width: 40px;
@@ -492,7 +538,7 @@ header .nav-button i {
 .sect-3-images .project-box .hover-text {
   opacity: 0;
   transition: opacity 1s;
-  background: linear-gradient(269deg, #00d9a6d9 0%, #9be15dd9 100%);
+  background: linear-gradient(217deg, #723341e6 0%, #d2405de6 100%);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -542,7 +588,7 @@ header .nav-button i {
   align-items: center;
   justify-content: center;
   height: 800px;
-  background-image: linear-gradient(271deg, #474747eb 0%, #0c0c0ceb 100%), url("../img/four-businesspeople-in-a-boardroom-with-paperwork-PC4V8H4.jpg");
+  background-image: linear-gradient(271deg, #474747ed 0%, #0c0c0ced 100%), url("../img/four-businesspeople-in-a-boardroom-with-paperwork-PC4V8H4.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -644,7 +690,7 @@ header .nav-button i {
   transition: bottom 0.5s;
 }
 .sect-5-content .box .post-info:before {
-  background: linear-gradient(269deg, #9be15d 0%, #00d9a6 100%);
+  background: linear-gradient(269deg, #d2405d 0%, #723341 100%);
   border-radius: 5px;
   content: "";
   width: 100%;
@@ -709,7 +755,7 @@ header .nav-button i {
   width: 60%;
   border-radius: 40px;
   background: linear-gradient(271deg, #555 0%, #444 100%);
-  box-shadow: 2px 2px 25px 0 #0c0c0c60;
+  box-shadow: 2px 2px 15px 0 #0c0c0c60;
   padding: 15px 20px;
 }
 .sect-6-box .dark-input > * {
@@ -733,7 +779,7 @@ header .nav-button i {
   margin: 10px 10px 10px 20px;
 }
 .sect-6 .box-2 {
-  background: linear-gradient(269deg, #9be15d 0%, #00d9a6 100%);
+  background: linear-gradient(269deg, #d2405d 0%, #723341 100%);
   margin: 10px 20px 10px 10px;
 }
 .sect-6 .brands {
@@ -771,7 +817,7 @@ header .nav-button i {
   margin: 5px 0;
 }
 .footer-content .box ul li:hover {
-  color: #00d9a6;
+  color: #d2405d;
 }
 .footer-content .box .contact {
   margin-top: 40px;

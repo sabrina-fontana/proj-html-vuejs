@@ -37,7 +37,7 @@
             <li v-for="el in headerLinks">{{el.name}}</li>
           </ul>
           <div class="nav-button">
-            <button class="green-button">purchase</button>
+            <button class="color1-button">purchase</button>
             <i class="fas fa-search"></i>
           </div>
         </nav>
@@ -51,9 +51,9 @@
           <div class="jumbotron-content">
             <div class="top-title">17 years of experience</div>
 
-            <div v-if="currSliderIndex === 0" class="main-title">We Are a<br> Web Design <span class="special-text">Agency</span></div>
-            <div v-if="currSliderIndex === 1" class="main-title">Focus on Your<br><span class="special-text">Business</span></div>
-            <div v-if="currSliderIndex === 2" class="main-title">A Group of<br> Expert <span class="special-text">Planners</span></div>
+            <div v-if="currSliderIndex === 0" class="main-title" :key="currSliderIndex">We Are a<br> Web Design <span class="special-text">Agency</span></div>
+            <div v-if="currSliderIndex === 1" class="main-title" :key="currSliderIndex">Focus on Your<br><span class="special-text">Business</span></div>
+            <div v-if="currSliderIndex === 2" class="main-title" :key="currSliderIndex">A Group of<br> Expert <span class="special-text">Planners</span></div>
 
             <div class="text">{{defaultText}}</div>
             <button class="black-button">read more</button>
@@ -62,14 +62,14 @@
               <span :class="{'selected' : index === currSliderIndex}" v-for="(image, index) in sliderImgs" @click="changeImg(index)">{{(index + 1).toLocaleString('en-US', {minimumIntegerDigits: 2})}}</span>
             </div>
           </div>
-          <img :src="sliderImgs[currSliderIndex]">
+          <img :src="sliderImgs[currSliderIndex]" :key="currSliderIndex">
         </div>
 
         <!-- sezione 1 -->
         <section class="sect-1">
           <div class="sect-1-left">
             <div class="title">We Are Here To Make Your <span class="special-text">Website</span> Look More <span class="special-text">Elegant</span> And Stylish!</div>
-            <button class="green-button">view all</button>
+            <button class="color1-button">view all</button>
           </div>
           <div class="sect-1-right">
             <div class="box">
@@ -99,12 +99,12 @@
         <section class="sect-2">
           <div class="images">
             <div class="under-img"></div>
-            <img class="over-img" src="img/businesswoman-analysing-document-P8WSNMC-1024x820.jpg" alt="">
+            <div class="over-img-container"><img class="over-img" src="img/businesswoman-analysing-document-P8WSNMC-1024x820.jpg" alt=""></div>
           </div>
           <div class="sect-2-content">
             <div class="title">learn more about our <span class="special-text">missions</span></div>
             <div class="text">{{defaultText}}</div>
-            <button class="green-button">read more</button>
+            <button class="color1-button">read more</button>
           </div>
         </section>
 
@@ -196,7 +196,7 @@
               </div>
             </div>
           </div>
-          <div class="sect-3-button"><button class="green-button">read more</button></div>
+          <div class="sect-3-button"><button class="color1-button">read more</button></div>
         </section>
 
         <!-- sezione 4 -->

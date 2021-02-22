@@ -69,7 +69,7 @@ mounted() {
     } else {
       this.currSliderIndex = 0;
     }
-  }, 4000)
+  }, 5000)
 },
 methods: {
   changeImg: function(index) {
