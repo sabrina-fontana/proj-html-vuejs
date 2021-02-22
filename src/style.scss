@@ -164,13 +164,13 @@ header {
 
         span {
           color: #e5e3df;
-          padding: 8px 18px;
+          padding: 10px 18px;
           margin: 2px;
           border-radius: 30px;
           cursor: pointer;
         }
 
-        span:first-child {
+        span.selected {
           background: $green-gradient-reverse;
         }
     }
@@ -613,6 +613,10 @@ header {
 
         li {
           margin: 5px 0;
+
+          &:hover {
+            color: $special-text-color;
+          }
         }
       }
 

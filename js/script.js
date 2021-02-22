@@ -1,6 +1,12 @@
 var app = new Vue({
 el: '#app',
 data: {
+  currSliderIndex: 0,
+  sliderImgs: [
+    'img/Group-36-2x.png',
+    'img/Group-35-2x.png',
+    'img/Group-40-2x.png'
+  ],
   headerLinks: [
     {
       name: 'home',
@@ -55,6 +61,11 @@ data: {
   ],
   defaultText: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. Separated they live in Bookmarksgrove.',
   defaultShortText: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated...'
+},
+methods: {
+  changeImg: function(index) {
+    return this.currSliderIndex = index;
   }
+}
 });
 Vue.config.devtools = true;
