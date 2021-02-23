@@ -85,10 +85,18 @@ mounted() {
   for (var x = 0; x < 4; x++) {
     this.isInViewport('animate-title', x);
   }
-  this.isInViewport('sect-title', 0);
-  this.isInViewport('sect-2-images', 0);
-  this.isInViewport('sect-title', 1);
 
+  this.isInViewport('sect-2-images', 0);
+
+  this.isInViewport('quote', 0);
+  this.isInViewport('sect-4-bottom', 0);
+
+  this.isInViewport('sect-6-box', 0);
+  this.isInViewport('sect-6-box', 1);
+  // img.brand-img
+  for (var x = 0; x < 6; x++) {
+    this.isInViewport('brand-img', x);
+  }
 },
 methods: {
   changeImg: function(index) {

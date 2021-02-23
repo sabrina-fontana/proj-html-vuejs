@@ -1,13 +1,12 @@
 // *****ANIMISTA*****
 
-// per immagini jumbotron
 @keyframes slide-in-right {
   0% {
-    transform: translateX(150px);
+    transform: translateX(-80px);
     opacity: 0;
   }
   50% {
-    transform: translateX(50px);
+    transform: translateX(-20px);
     opacity: 0.8;
   }
   100% {
@@ -16,18 +15,8 @@
   }
 }
 
-// per titolo jumbotron
-@keyframes slide-top {
-  0% {
-    transform: translateY(100px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
-
 // per numero slider jumbotron
-@keyframes slide-in-left {
+@keyframes slide-in-right-jumbotron {
   0% {
     transform: translateX(-10px);
     opacity: 0;
@@ -38,14 +27,13 @@
   }
 }
 
-// per sezioni
-@keyframes slide-in-left-sect {
+@keyframes slide-in-left {
   0% {
-    transform: translateX(50px);
+    transform: translateX(80px);
     opacity: 0;
   }
   50% {
-    transform: translateX(10px);
+    transform: translateX(20px);
     opacity: 0.8;
   }
   100% {
@@ -54,10 +42,9 @@
   }
 }
 
-// per button
-@keyframes slide-in-top-btn {
+@keyframes slide-in-top {
   0% {
-    transform: translateY(100px);
+    transform: translateY(80px);
     opacity: 0;
   }
   50% {
@@ -66,6 +53,21 @@
   }
   100% {
     transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes scale-in-center {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(0.9);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
     opacity: 1;
   }
 }
