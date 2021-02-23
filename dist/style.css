@@ -10,6 +10,7 @@
     opacity: 0;
   }
   50% {
+    transform: translateX(50px);
     opacity: 0.8;
   }
   100% {
@@ -24,6 +25,7 @@
     opacity: 0;
   }
   50% {
+    transform: translateX(50px);
     opacity: 0.8;
   }
   100% {
@@ -230,8 +232,11 @@ img, i, li, button {
 }
 
 header {
+  width: 100%;
   box-shadow: 0 4px 44px 0 rgba(0, 0, 0, 0.14);
   font-size: 14px;
+  position: fixed;
+  z-index: 10;
 }
 header .top-nav {
   display: flex;
@@ -240,13 +245,13 @@ header .top-nav {
   background: #3d3d3d;
   color: #ffffff;
   font-family: "Ubuntu", sans-serif;
-  padding: 12px 50px;
+  padding: 10px 50px;
 }
 header .top-nav * {
-  margin: 0 7px;
+  margin: 0 8px;
 }
 header .top-nav i {
-  font-size: 17px;
+  font-size: 16px;
 }
 header .nav {
   display: flex;
@@ -254,10 +259,10 @@ header .nav {
   align-items: center;
   font-family: "Quicksand", sans-serif;
   background: #ffffff;
-  padding: 25px 50px;
+  padding: 22px 50px;
 }
 header .nav img {
-  width: 200px;
+  width: 180px;
 }
 header .nav ul li {
   color: #3d3d3d;
@@ -286,14 +291,15 @@ header .nav-button i {
   background-color: #f9f9f9;
   overflow: hidden;
   position: relative;
+  top: 128.8px;
 }
 .jumbotron img {
   width: 1060px;
   position: absolute;
   top: -40px;
   right: -220px;
-  -webkit-animation: slide-in-right 0.8s ease-out;
-          animation: slide-in-right 0.8s ease-out;
+  -webkit-animation: slide-in-right 1s ease-out;
+          animation: slide-in-right 1s ease-out;
 }
 .jumbotron-content {
   width: 650px;
@@ -364,6 +370,7 @@ header .nav-button i {
 .sect-1 {
   display: flex;
   background-color: #ffffff59;
+  overflow: hidden;
 }
 .sect-1-left {
   width: 45%;
@@ -385,6 +392,12 @@ header .nav-button i {
   margin: 20px;
   position: relative;
   z-index: 1;
+  opacity: 0;
+}
+.sect-1-right .box.animated {
+  -webkit-animation: slide-in-right 1s ease-out;
+          animation: slide-in-right 1s ease-out;
+  opacity: 1;
 }
 .sect-1-right .box > * {
   padding: 15px 0;
@@ -409,7 +422,11 @@ header .nav-button i {
 .sect-1-right .box:hover {
   color: #fff;
 }
+.sect-1-right .box:hover i {
+  color: #fff;
+}
 .sect-1-right .box i {
+  color: #d2405d;
   font-size: 56px;
 }
 

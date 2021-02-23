@@ -70,10 +70,24 @@ mounted() {
       this.currSliderIndex = 0;
     }
   }, 5000)
+
+  // controllo che l'elemento rientri della viewport
+  for (var x = 0; x < 4; x++) {
+    this.isInViewport('box', x);
+  }
 },
 methods: {
   changeImg: function(index) {
     return this.currSliderIndex = index;
+  },
+  isInViewport: function(className, index) {
+    window.addEventListener('scroll', function() {
+      const el = document.getElementsByClassName(className)[index];
+      const elRect = el.getBoundingClientRect();
+      if (elRect.top >= 0 && elRect.left >= 0 && elRect.right <= window.innerWidth && elRect.bottom <= window.innerHeight) {
+        el.classList.add('animated');
+      } 
+    })
   }
 }
 });

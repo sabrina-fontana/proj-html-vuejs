@@ -57,22 +57,25 @@ img, i, li, button {
 
 // *****INIZIO HEADER*****
 header {
+  width: 100%;
   box-shadow: 0 4px 44px 0 rgb(0 0 0 / 14%);
   font-size: $header-font-size;
+  position: fixed;
+  z-index: 10;
 
   .top-nav {
     @include flex-space-btw;
     background: $top-nav-bg;
     color: $top-nav-color;
     font-family: $text-font;
-    padding: 12px 50px;
+    padding: 10px 50px;
 
     * {
-      margin: 0 7px;
+      margin: 0 8px;
     }
 
     i {
-      font-size: 17px;
+      font-size: 16px;
     }
   }
 
@@ -80,10 +83,10 @@ header {
     @include flex-space-btw;
     font-family: $title-font;
     background: $nav-bg;
-    padding: 25px 50px;
+    padding: 22px 50px;
 
     img {
-      width: 200px;
+      width: 180px;
     }
 
     ul {
@@ -126,13 +129,14 @@ header {
   background-color: $darker-bg;
   overflow: hidden;
   position: relative;
+  top: 128.8px;
 
   img {
     width: 1060px;
     position: absolute;
     top: -40px;
     right: -220px;
-	  animation: slide-in-right .8s ease-out;
+	  animation: slide-in-right 1s ease-out;
   }
 
   &-content {
@@ -217,6 +221,7 @@ header {
 .sect-1 {
   display: flex;
   background-color: $lighter-bg;
+  overflow: hidden;
 
   &-left {
     width: 45%;
@@ -239,6 +244,12 @@ header {
       margin: 20px;
       position: relative;
       z-index: 1;
+      opacity: 0;
+
+      &.animated {
+        animation: slide-in-right 1s ease-out;
+        opacity: 1;
+      }
 
       > * {
         padding: 15px 0;
@@ -263,9 +274,14 @@ header {
       }
       &:hover {
         color: #fff;
+
+        i {
+          color: #fff;
+        }
       }
 
       i {
+        color: $color1;
         font-size: 56px;
       }
     }
