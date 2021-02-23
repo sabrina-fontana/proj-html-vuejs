@@ -69,6 +69,62 @@
     opacity: 1;
   }
 }
+@-webkit-keyframes slide-in-left-sect {
+  0% {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(10px);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-left-sect {
+  0% {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(10px);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes slide-in-top-btn {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(20px);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-top-btn {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(20px);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 .top-title {
   font-family: "Quicksand", sans-serif;
   text-transform: uppercase;
@@ -231,6 +287,24 @@ img, i, li, button {
   cursor: pointer;
 }
 
+.animate-btn {
+  opacity: 0;
+}
+.animate-btn.animated {
+  -webkit-animation: slide-in-top-btn 1s ease-out;
+          animation: slide-in-top-btn 1s ease-out;
+  opacity: 1;
+}
+
+.animate-title {
+  opacity: 0;
+}
+.animate-title.animated {
+  -webkit-animation: slide-in-left-sect 1s ease-out;
+          animation: slide-in-left-sect 1s ease-out;
+  opacity: 1;
+}
+
 header {
   width: 100%;
   box-shadow: 0 4px 44px 0 rgba(0, 0, 0, 0.14);
@@ -376,6 +450,14 @@ header .nav-button i {
   width: 45%;
   padding: 70px 90px;
 }
+.sect-1-left .title {
+  opacity: 0;
+}
+.sect-1-left .title.animated {
+  -webkit-animation: slide-in-left-sect 1s ease-out;
+          animation: slide-in-left-sect 1s ease-out;
+  opacity: 1;
+}
 .sect-1-left button {
   margin-top: 100px;
 }
@@ -395,8 +477,8 @@ header .nav-button i {
   opacity: 0;
 }
 .sect-1-right .box.animated {
-  -webkit-animation: slide-in-right 1s ease-out;
-          animation: slide-in-right 1s ease-out;
+  -webkit-animation: slide-in-left-sect 1s ease-out;
+          animation: slide-in-left-sect 1s ease-out;
   opacity: 1;
 }
 .sect-1-right .box > * {
@@ -437,6 +519,15 @@ header .nav-button i {
 .sect-2 .images {
   width: 50%;
 }
+.sect-2 .images.animated .under-img {
+  left: -30px;
+}
+.sect-2 .images.animated .over-img-container {
+  left: 150px;
+}
+.sect-2 .images.animated .over-img {
+  transform: scale(1.15);
+}
 .sect-2 .images .under-img {
   width: 600px;
   height: 450px;
@@ -446,14 +537,14 @@ header .nav-button i {
   z-index: 0;
   background-image: linear-gradient(217deg, #723341e6 0%, #d2405de6 100%), url("../img/busy-architect-PYVKWM4-1024x872.jpg");
   background-size: contain;
-  transition: left 0.5s;
+  transition: left 0.8s;
 }
 .sect-2 .images .over-img-container {
   width: 550px;
   height: 450px;
   border-radius: 20px;
   position: relative;
-  left: 80px;
+  left: 60px;
   top: 60px;
   overflow: hidden;
   transition: left 1s;
@@ -461,7 +552,7 @@ header .nav-button i {
 .sect-2 .images .over-img-container .over-img {
   width: 100%;
   height: 100%;
-  transition: transform 1s;
+  transition: transform 1.5s;
 }
 .sect-2-content {
   width: 50%;
@@ -469,15 +560,6 @@ header .nav-button i {
 }
 .sect-2-content .text {
   margin: 80px 0 40px 0;
-}
-.sect-2:hover .under-img {
-  left: -10px;
-}
-.sect-2:hover .over-img-container {
-  left: 130px;
-}
-.sect-2:hover .over-img {
-  transform: scale(1.15);
 }
 
 .sect-3 {

@@ -71,10 +71,24 @@ mounted() {
     }
   }, 5000)
 
-  // controllo che l'elemento rientri della viewport
+  // controllo che gli elementi rientrino della viewport
+
+  // button.animate-btn
+  for (var x = 0; x < 5; x++) {
+    this.isInViewport('animate-btn', x);
+  }
+  // box sect-1
   for (var x = 0; x < 4; x++) {
     this.isInViewport('box', x);
   }
+  // animate-title
+  for (var x = 0; x < 4; x++) {
+    this.isInViewport('animate-title', x);
+  }
+  this.isInViewport('sect-title', 0);
+  this.isInViewport('sect-2-images', 0);
+  this.isInViewport('sect-title', 1);
+
 },
 methods: {
   changeImg: function(index) {
@@ -86,7 +100,7 @@ methods: {
       const elRect = el.getBoundingClientRect();
       if (elRect.top >= 0 && elRect.left >= 0 && elRect.right <= window.innerWidth && elRect.bottom <= window.innerHeight) {
         el.classList.add('animated');
-      } 
+      }
     })
   }
 }

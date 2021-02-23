@@ -56,7 +56,7 @@
             <div v-if="currSliderIndex === 2" class="main-title" :key="currSliderIndex">A Group of<br> Expert <span class="special-text">Planners</span></div>
 
             <div class="text">{{defaultText}}</div>
-            <button class="black-button">read more</button>
+            <button class="black-button animate-btn">read more</button>
             <div class="socials"><span>facebook</span> - <span>instagram</span> - <span>youtube</span> - <span>twitter</span></div>
             <div class="slider-num">
               <span :class="{'selected' : index === currSliderIndex}" v-for="(image, index) in sliderImgs" @click="changeImg(index)">{{(index + 1).toLocaleString('en-US', {minimumIntegerDigits: 2})}}</span>
@@ -68,8 +68,8 @@
         <!-- sezione 1 -->
         <section class="sect-1" v-scrollanimation>
           <div class="sect-1-left">
-            <div class="title">We Are Here To Make Your <span class="special-text">Website</span> Look More <span class="special-text">Elegant</span> And Stylish!</div>
-            <button class="color1-button">view all</button>
+            <div class="title animate-title">We Are Here To Make Your <span class="special-text">Website</span> Look More <span class="special-text">Elegant</span> And Stylish!</div>
+            <button class="color1-button animate-btn">view all</button>
           </div>
           <div class="sect-1-right">
             <div class="box">
@@ -97,21 +97,21 @@
 
         <!-- sezione 2 -->
         <section class="sect-2">
-          <div class="images">
+          <div class="images sect-2-images">
             <div class="under-img"></div>
             <div class="over-img-container"><img class="over-img" src="img/businesswoman-analysing-document-P8WSNMC-1024x820.jpg" alt=""></div>
           </div>
           <div class="sect-2-content">
-            <div class="title">learn more about our <span class="special-text">missions</span></div>
-            <div class="text">{{defaultText}}</div>
-            <button class="color1-button">read more</button>
+            <div class="title animate-title">learn more about our <span class="special-text">missions</span></div>
+            <div class="text sect-text">{{defaultText}}</div>
+            <button class="color1-button animate-btn">read more</button>
           </div>
         </section>
 
         <!-- sezione 3 -->
         <section class="sect-3">
           <div class="sect-3-content">
-            <div class="title">Our recent <span class="special-text">web designs</span> & some examples of past <span class="special-text">projects</span></div>
+            <div class="title animate-title">Our recent <span class="special-text">web designs</span> & some examples of past <span class="special-text">projects</span></div>
             <div class="text">{{defaultText}} {{defaultShortText}}</div>
           </div>
           <div class="sect-3-images">
@@ -196,7 +196,7 @@
               </div>
             </div>
           </div>
-          <div class="sect-3-button"><button class="color1-button">read more</button></div>
+          <div class="sect-3-button"><button class="color1-button animate-btn">read more</button></div>
         </section>
 
         <!-- sezione 4 -->
@@ -210,7 +210,7 @@
 
         <!-- sezione 5 -->
         <section class="sect-5">
-          <div class="title">Latest News & Our <span class="special-text">Blog</span></div>
+          <div class="title animate-title">Latest News & Our <span class="special-text">Blog</span></div>
           <div class="sect-5-content">
             <div class="box">
               <div class="img-container"><img src="img/serious-businesswoman-with-documents-talking-on-P9Q6LX6-1024.jpg" alt=""></div>
@@ -234,7 +234,7 @@
               </div>
             </div>
           </div>
-          <button class="black-button">view all post</button>
+          <button class="black-button animate-btn">view all post</button>
         </section>
 
         <!-- sezione 6 -->
