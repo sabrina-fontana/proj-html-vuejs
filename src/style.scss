@@ -6,6 +6,7 @@
 
 @import "_var";
 @import "_colors";
+@import "_animations";
 
 // *****INIZIO CLASSI UTILITY*****
 .top-title {
@@ -40,13 +41,14 @@
   @include black-button;
 }
 
-.footer-title {
-  @include footer-title;
-}
 // *****FINE CLASSI UTILITY*****
 
 section {
   padding: $section-padding;
+}
+
+ul {
+  list-style: none;
 }
 
 img, i, li, button {
@@ -59,7 +61,7 @@ header {
   font-size: $header-font-size;
 
   .top-nav {
-    @include header-display;
+    @include flex-space-btw;
     background: $top-nav-bg;
     color: $top-nav-color;
     font-family: $text-font;
@@ -70,12 +72,12 @@ header {
     }
 
     i {
-      @include icons;
+      font-size: 17px;
     }
   }
 
   .nav {
-    @include header-display;
+    @include flex-space-btw;
     font-family: $title-font;
     background: $nav-bg;
     padding: 25px 50px;
@@ -85,14 +87,21 @@ header {
     }
 
     ul {
-      list-style: none;
 
       li {
-        @include nav-links;
+        color: $nav-color;
+        font-weight: 500;
+        text-transform: uppercase;
+        display: inline-block;
+        margin: 0 15px;
+        &:hover {
+          color: $text-hover-color;
+        }
       }
 
       li:first-child {
-        @include selected-nav-link;
+        color: black;
+        font-weight: 600;
       }
     }
 
@@ -103,7 +112,7 @@ header {
       }
 
       i {
-        @include icons;
+        font-size: 17px;
         color: $color1;
         margin: 0 13px;
       }
@@ -114,9 +123,8 @@ header {
 
 // *****INIZIO JUMBOTRON*****
 .jumbotron {
-  overflow: hidden;
   background-color: $darker-bg;
-  height: 820px;
+  overflow: hidden;
   position: relative;
 
   img {
@@ -125,30 +133,6 @@ header {
     top: -40px;
     right: -220px;
 	  animation: slide-in-right .8s ease-out;
-
-  }
-
-  @keyframes slide-in-right {
-    0% {
-      transform: translateX(150px);
-      opacity: 0;
-    }
-    50% {
-      opacity: 0.8;
-    }
-    100% {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  }
-
-  @keyframes slide-top {
-    0% {
-      transform: translateY(100px);
-    }
-    100% {
-      transform: translateY(0px);
-    }
   }
 
   &-content {
@@ -169,10 +153,10 @@ header {
     }
 
     .socials {
-      text-transform: uppercase;
       font-family: $title-font;
       font-size: 13px;
       font-weight: 700;
+      text-transform: uppercase;
       margin: 50px 0;
 
       span {
@@ -182,7 +166,14 @@ header {
     }
 
     .slider-num {
-      @include slider-num;
+      font-family: $title-font;
+      font-weight: 500;
+      color: white;
+      background: $grey-gradient;
+      box-shadow: $black-shadow;
+      border-radius: 40px;
+      display: flex;
+      align-items: center;
       z-index: 1;
       position: absolute;
       right: 45%;
@@ -195,24 +186,26 @@ header {
           border-radius: 30px;
           cursor: pointer;
           position: relative;
+
           &:before {
-            background: $color1-gradient;
-            border-radius: 30px;
-            content: "";
             width: 100%;
             height: 100%;
+            content: "";
+            background: $color1-gradient;
+            border-radius: 30px;
+            position: absolute;
             top: 0;
             left: 0;
-            position: absolute;
             z-index: -1;
             opacity: 0;
-            transition: opacity .3s ease-out;
           }
         }
 
         span.selected {
+
           &:before {
             opacity: 1;
+            animation: slide-in-left 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940);
           }
         }
     }
@@ -222,8 +215,8 @@ header {
 
 // *****INIZIO SEZIONE 1*****
 .sect-1 {
-  background-color: $lighter-bg;
   display: flex;
+  background-color: $lighter-bg;
 
   &-left {
     width: 45%;
@@ -239,8 +232,38 @@ header {
     width: 55%;
 
     .box {
-      @include box-services;
       width: calc(55% - 90px);
+      border-radius: 20px;
+      box-shadow: 6px 6px 20px 0 #0c0c0c20;
+      padding: 30px;
+      margin: 20px;
+      position: relative;
+      z-index: 1;
+
+      > * {
+        padding: 15px 0;
+      }
+      // ****linear grdient non supporta le transition!!
+      &:before {
+        width: 100%;
+        height: 100%;
+        content: "";
+        background: $color2-gradient;
+        box-shadow: $color1-shadow;
+        border-radius: 20px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        opacity: 0;
+        transition: opacity .5s;
+      }
+      &:hover:before {
+        opacity: 1;
+      }
+      &:hover {
+        color: #fff;
+      }
 
       i {
         font-size: 56px;
@@ -252,33 +275,19 @@ header {
 
 // *****INIZIO SEZIONE 2*****
 .sect-2 {
-  background-color: $darker-bg;
   display: flex;
+  background-color: $darker-bg;
 
   .images {
     width: 50%;
 
-    &:hover {
-      .under-img {
-        left: -10px;
-      }
-
-      .over-img-container {
-        left: 120px;
-      }
-
-      .over-img {
-        transform: scale(1.1);
-      }
-    }
-
     .under-img {
-      position: absolute;
-      left: - 50px;
-      border-radius: 20px;
-      z-index: 0;
       width: 600px;
       height: 450px;
+      border-radius: 20px;
+      position: absolute;
+      left: - 50px;
+      z-index: 0;
       background-image: $color2-gradient-faded, url('../img/busy-architect-PYVKWM4-1024x872.jpg');
       background-size: contain;
       transition: left .5s;
@@ -287,17 +296,17 @@ header {
     .over-img-container {
       width: 550px;
       height: 450px;
-      position: relative;
       border-radius: 20px;
+      position: relative;
       left: 80px;
       top: 60px;
       overflow: hidden;
-      transition: left .5s;
+      transition: left 1s;
 
       .over-img {
         width: 100%;
         height: 100%;
-        transition:transform .5s;
+        transition:transform 1s;
       }
     }
   }
@@ -305,8 +314,23 @@ header {
   &-content {
     width: 50%;
     padding: 80px 50px;
+
     .text {
       margin: 80px 0 40px 0;
+    }
+  }
+
+  &:hover {
+    .under-img {
+      left: -10px;
+    }
+
+    .over-img-container {
+      left: 130px;
+    }
+
+    .over-img {
+      transform: scale(1.15);
     }
   }
 }
@@ -352,9 +376,14 @@ header {
     padding: 80px 20px;
 
     .project-box {
-      @include project-box;
+      width: 25%;
+      transition: transform .3s;
+      position: relative;
 
       &:hover {
+        transform: scale(1.15);
+        z-index: 1;
+
         .hover-text {
           opacity: 1;
 
@@ -372,7 +401,6 @@ header {
       }
 
       .hover-text {
-        @include project-hover;
         @include flex-column;
         justify-content: flex-end;
         // la grandezza dev'essere uguale a quella dell'img (quindi sottraggo i padding)
@@ -380,9 +408,12 @@ header {
         height: calc(100% - 4px);
         padding: 50px 40px;
         border-radius: 10px;
+        background: $color2-gradient-faded;
+        position: absolute;
         top: 2px;
         left: 2px;
-        position: absolute;
+        opacity: 0;
+        transition: opacity 1s;
 
         > * {
           padding-top: 10px;
@@ -393,19 +424,32 @@ header {
         }
 
         .project-title {
-          @include project-title;
+          font-family: $title-font;
+          font-size: 20px;
+          font-weight: 700;
+          color: #fff;
         }
 
         .project-links {
-          @include project-links;
+          font-family: $title-font;
+          font-weight: 600;
+          font-size: 13px;
+          color: #fff;
+          text-transform: uppercase;
+
+          i {
+            font-size: 3px;
+            color: #aaa;
+            padding: 0 5px;
+            vertical-align: middle;
+          }
         }
       }
     }
   }
 
   &-button {
-    display: flex;
-    justify-content: center;
+    @include flex-center;
     margin: 50px 0;
   }
 }
@@ -427,9 +471,14 @@ header {
   }
 
   .quote {
-    @include quote;
-    padding: 50px 0;
     width: 55%;
+    font-family: 'Nunito', sans-serif;
+    font-style: italic;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 300;
+    color: #f9f9f9;
+    padding: 50px 0;
     line-height: 50px;
   }
 
@@ -477,8 +526,7 @@ header {
   }
 
   &-content {
-    display: flex;
-    justify-content: center;
+    @include flex-center;
     margin: 30px 0;
 
     .box {
@@ -532,14 +580,14 @@ header {
         transition: bottom .5s;
 
         &:before {
-          background: $color2-gradient;
-          border-radius: 5px;
-          content: "";
           width: 100%;
           height: 100%;
+          content: "";
+          background: $color2-gradient;
+          border-radius: 5px;
+          position: absolute;
           top: 0;
           left: 0;
-          position: absolute;
           z-index: -1;
           opacity: 0;
           transition: opacity .5s;
@@ -625,7 +673,6 @@ header {
       button {
         text-transform: uppercase;
         color: #f5f5f5;
-        cursor: pointer;
       }
     }
   }
@@ -659,13 +706,35 @@ header {
   color: $footer-color;
 
   &-content {
-    background: $lighter-bg;
     display: flex;
+    background: $lighter-bg;
     padding: 130px 30px;
 
     .box {
       width: 25%;
       padding: 0 20px;
+
+      .footer-title {
+        font-family: $title-font;
+        font-size: 22px;
+        font-weight: 700;
+        text-transform: uppercase;
+        position: relative;
+
+        &:before {
+          @include divider;
+          width: 10px;
+          left: 0;
+          bottom: -20px;
+        }
+
+        &:after {
+          @include divider;
+          width: 40px;
+          left: 20px;
+          bottom: -20px;
+        }
+      }
 
       .logo-img {
         margin-bottom: 20px;
@@ -673,7 +742,6 @@ header {
       }
 
       ul {
-        list-style: none;
         margin-top: 40px;
 
         li {

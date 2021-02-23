@@ -4,6 +4,69 @@
   padding: 0;
 }
 
+@-webkit-keyframes slide-in-right {
+  0% {
+    transform: translateX(150px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-right {
+  0% {
+    transform: translateX(150px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes slide-top {
+  0% {
+    transform: translateY(100px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes slide-top {
+  0% {
+    transform: translateY(100px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@-webkit-keyframes slide-in-left {
+  0% {
+    transform: translateX(-10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-left {
+  0% {
+    transform: translateX(-10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 .top-title {
   font-family: "Quicksand", sans-serif;
   text-transform: uppercase;
@@ -154,36 +217,12 @@
   box-shadow: 6px 6px 25px 0 #d2405d66;
 }
 
-.footer-title {
-  font-family: "Quicksand", sans-serif;
-  font-size: 22px;
-  font-weight: 700;
-  text-transform: uppercase;
-  position: relative;
-}
-.footer-title:before {
-  content: "";
-  height: 5px;
-  background: linear-gradient(269deg, #723341 0%, #d2405d 100%);
-  border-radius: 5px;
-  position: absolute;
-  width: 10px;
-  left: 0;
-  bottom: -20px;
-}
-.footer-title:after {
-  content: "";
-  height: 5px;
-  background: linear-gradient(269deg, #723341 0%, #d2405d 100%);
-  border-radius: 5px;
-  position: absolute;
-  width: 40px;
-  left: 20px;
-  bottom: -20px;
-}
-
 section {
   padding: 150px 0;
+}
+
+ul {
+  list-style: none;
 }
 
 img, i, li, button {
@@ -207,7 +246,6 @@ header .top-nav * {
   margin: 0 7px;
 }
 header .top-nav i {
-  cursor: pointer;
   font-size: 17px;
 }
 header .nav {
@@ -220,9 +258,6 @@ header .nav {
 }
 header .nav img {
   width: 200px;
-}
-header .nav ul {
-  list-style: none;
 }
 header .nav ul li {
   color: #3d3d3d;
@@ -242,16 +277,14 @@ header .nav-button button {
   margin: 0 13px;
 }
 header .nav-button i {
-  cursor: pointer;
   font-size: 17px;
   color: #d2405d;
   margin: 0 13px;
 }
 
 .jumbotron {
-  overflow: hidden;
   background-color: #f9f9f9;
-  height: 820px;
+  overflow: hidden;
   position: relative;
 }
 .jumbotron img {
@@ -261,48 +294,6 @@ header .nav-button i {
   right: -220px;
   -webkit-animation: slide-in-right 0.8s ease-out;
           animation: slide-in-right 0.8s ease-out;
-}
-@-webkit-keyframes slide-in-right {
-  0% {
-    transform: translateX(150px);
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.8;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-@keyframes slide-in-right {
-  0% {
-    transform: translateX(150px);
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.8;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-@-webkit-keyframes slide-top {
-  0% {
-    transform: translateY(100px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
-@keyframes slide-top {
-  0% {
-    transform: translateY(100px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
 }
 .jumbotron-content {
   width: 650px;
@@ -320,10 +311,10 @@ header .nav-button i {
   margin: 10px 0;
 }
 .jumbotron-content .socials {
-  text-transform: uppercase;
   font-family: "Quicksand", sans-serif;
   font-size: 13px;
   font-weight: 700;
+  text-transform: uppercase;
   margin: 50px 0;
 }
 .jumbotron-content .socials span {
@@ -331,13 +322,12 @@ header .nav-button i {
   cursor: pointer;
 }
 .jumbotron-content .slider-num {
-  color: white;
   font-family: "Quicksand", sans-serif;
   font-weight: 500;
-  border: none;
-  border-radius: 40px;
+  color: white;
   background: linear-gradient(271deg, #3d3d3d 0%, #474747 100%);
-  box-shadow: 2px 2px 25px 0 #0c0c0c60;
+  box-shadow: 2px 2px 15px 0 #0c0c0c60;
+  border-radius: 40px;
   display: flex;
   align-items: center;
   z-index: 1;
@@ -354,25 +344,26 @@ header .nav-button i {
   position: relative;
 }
 .jumbotron-content .slider-num span:before {
-  background: linear-gradient(269deg, #723341 0%, #d2405d 100%);
-  border-radius: 30px;
-  content: "";
   width: 100%;
   height: 100%;
+  content: "";
+  background: linear-gradient(269deg, #723341 0%, #d2405d 100%);
+  border-radius: 30px;
+  position: absolute;
   top: 0;
   left: 0;
-  position: absolute;
   z-index: -1;
   opacity: 0;
-  transition: opacity 0.3s ease-out;
 }
 .jumbotron-content .slider-num span.selected:before {
   opacity: 1;
+  -webkit-animation: slide-in-left 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+          animation: slide-in-left 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .sect-1 {
-  background-color: #ffffff59;
   display: flex;
+  background-color: #ffffff59;
 }
 .sect-1-left {
   width: 45%;
@@ -387,27 +378,27 @@ header .nav-button i {
   width: 55%;
 }
 .sect-1-right .box {
+  width: calc(55% - 90px);
   border-radius: 20px;
   box-shadow: 6px 6px 20px 0 #0c0c0c20;
   padding: 30px;
   margin: 20px;
   position: relative;
   z-index: 1;
-  width: calc(55% - 90px);
 }
 .sect-1-right .box > * {
   padding: 15px 0;
 }
 .sect-1-right .box:before {
+  width: 100%;
+  height: 100%;
+  content: "";
   background: linear-gradient(269deg, #d2405d 0%, #723341 100%);
   box-shadow: 6px 6px 25px 0 #d2405d66;
   border-radius: 20px;
-  content: "";
-  width: 100%;
-  height: 100%;
+  position: absolute;
   top: 0;
   left: 0;
-  position: absolute;
   z-index: -1;
   opacity: 0;
   transition: opacity 0.5s;
@@ -423,28 +414,19 @@ header .nav-button i {
 }
 
 .sect-2 {
-  background-color: #f9f9f9;
   display: flex;
+  background-color: #f9f9f9;
 }
 .sect-2 .images {
   width: 50%;
 }
-.sect-2 .images:hover .under-img {
-  left: -10px;
-}
-.sect-2 .images:hover .over-img-container {
-  left: 120px;
-}
-.sect-2 .images:hover .over-img {
-  transform: scale(1.1);
-}
 .sect-2 .images .under-img {
-  position: absolute;
-  left: -50px;
-  border-radius: 20px;
-  z-index: 0;
   width: 600px;
   height: 450px;
+  border-radius: 20px;
+  position: absolute;
+  left: -50px;
+  z-index: 0;
   background-image: linear-gradient(217deg, #723341e6 0%, #d2405de6 100%), url("../img/busy-architect-PYVKWM4-1024x872.jpg");
   background-size: contain;
   transition: left 0.5s;
@@ -452,17 +434,17 @@ header .nav-button i {
 .sect-2 .images .over-img-container {
   width: 550px;
   height: 450px;
-  position: relative;
   border-radius: 20px;
+  position: relative;
   left: 80px;
   top: 60px;
   overflow: hidden;
-  transition: left 0.5s;
+  transition: left 1s;
 }
 .sect-2 .images .over-img-container .over-img {
   width: 100%;
   height: 100%;
-  transition: transform 0.5s;
+  transition: transform 1s;
 }
 .sect-2-content {
   width: 50%;
@@ -470,6 +452,15 @@ header .nav-button i {
 }
 .sect-2-content .text {
   margin: 80px 0 40px 0;
+}
+.sect-2:hover .under-img {
+  left: -10px;
+}
+.sect-2:hover .over-img-container {
+  left: 130px;
+}
+.sect-2:hover .over-img {
+  transform: scale(1.15);
 }
 
 .sect-3 {
@@ -536,9 +527,6 @@ header .nav-button i {
   border-radius: 10px;
 }
 .sect-3-images .project-box .hover-text {
-  opacity: 0;
-  transition: opacity 1s;
-  background: linear-gradient(217deg, #723341e6 0%, #d2405de6 100%);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -546,9 +534,12 @@ header .nav-button i {
   height: calc(100% - 4px);
   padding: 50px 40px;
   border-radius: 10px;
+  background: linear-gradient(217deg, #723341e6 0%, #d2405de6 100%);
+  position: absolute;
   top: 2px;
   left: 2px;
-  position: absolute;
+  opacity: 0;
+  transition: opacity 1s;
 }
 .sect-3-images .project-box .hover-text > * {
   padding-top: 10px;
@@ -596,6 +587,7 @@ header .nav-button i {
   font-size: 60px;
 }
 .sect-4 .quote {
+  width: 55%;
   font-family: "Nunito", sans-serif;
   font-style: italic;
   text-align: center;
@@ -603,7 +595,6 @@ header .nav-button i {
   font-weight: 300;
   color: #f9f9f9;
   padding: 50px 0;
-  width: 55%;
   line-height: 50px;
 }
 .sect-4-image {
@@ -690,14 +681,14 @@ header .nav-button i {
   transition: bottom 0.5s;
 }
 .sect-5-content .box .post-info:before {
-  background: linear-gradient(269deg, #d2405d 0%, #723341 100%);
-  border-radius: 5px;
-  content: "";
   width: 100%;
   height: 100%;
+  content: "";
+  background: linear-gradient(269deg, #d2405d 0%, #723341 100%);
+  border-radius: 5px;
+  position: absolute;
   top: 0;
   left: 0;
-  position: absolute;
   z-index: -1;
   opacity: 0;
   transition: opacity 0.5s;
@@ -752,6 +743,7 @@ header .nav-button i {
 .sect-6-box .dark-input {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 60%;
   border-radius: 40px;
   background: linear-gradient(271deg, #555 0%, #444 100%);
@@ -772,7 +764,6 @@ header .nav-button i {
 .sect-6-box .dark-input button {
   text-transform: uppercase;
   color: #f5f5f5;
-  cursor: pointer;
 }
 .sect-6 .box-1 {
   background: linear-gradient(271deg, #0c0c0c 0%, #474747 100%);
@@ -797,20 +788,46 @@ header .nav-button i {
   color: #444;
 }
 .footer-content {
-  background: #ffffff59;
   display: flex;
+  background: #ffffff59;
   padding: 130px 30px;
 }
 .footer-content .box {
   width: 25%;
   padding: 0 20px;
 }
+.footer-content .box .footer-title {
+  font-family: "Quicksand", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  text-transform: uppercase;
+  position: relative;
+}
+.footer-content .box .footer-title:before {
+  content: "";
+  height: 5px;
+  background: linear-gradient(269deg, #723341 0%, #d2405d 100%);
+  border-radius: 5px;
+  position: absolute;
+  width: 10px;
+  left: 0;
+  bottom: -20px;
+}
+.footer-content .box .footer-title:after {
+  content: "";
+  height: 5px;
+  background: linear-gradient(269deg, #723341 0%, #d2405d 100%);
+  border-radius: 5px;
+  position: absolute;
+  width: 40px;
+  left: 20px;
+  bottom: -20px;
+}
 .footer-content .box .logo-img {
   margin-bottom: 20px;
   cursor: pointer;
 }
 .footer-content .box ul {
-  list-style: none;
   margin-top: 40px;
 }
 .footer-content .box ul li {
@@ -832,6 +849,7 @@ header .nav-button i {
 .footer-bottom {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background: linear-gradient(271deg, #0c0c0c 0%, #474747 100%);
   color: #aaa;
   font-family: "Ubuntu", sans-serif;
